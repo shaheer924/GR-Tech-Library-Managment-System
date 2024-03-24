@@ -9,12 +9,15 @@ const getBookById = baseController.getById(Books)
 const updateBook = baseController.updateRecord(Books, Book)
 const deleteBook = baseController.deleteRecord(Books)
 
+// book search
 const bookSearch = async (req, res, next) => {
     try {
         let {search} = req.query
 
+        // creating expression for search
         search = new RegExp(search, 'i')
 
+        // aggregation for searching books
         let data = await Books.aggregate([
             {
                 $match: {

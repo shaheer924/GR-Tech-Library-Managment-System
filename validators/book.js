@@ -1,5 +1,6 @@
 import Joi from "joi";
 
+// create record validator
 const createRecord = Joi.object({
     title: Joi.string().required(),
     author: Joi.string().required(),
@@ -7,6 +8,7 @@ const createRecord = Joi.object({
     genre: Joi.string().required()
 })
 
+// update record validator
 const updateRecord = Joi.object({
     title: Joi.string().required(),
     author: Joi.string().required(),

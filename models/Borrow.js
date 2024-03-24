@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 
+// Borrow Schema
 const BorrowSchema = new mongoose.Schema({
     userId: {
         type: mongoose.Schema.ObjectId,
